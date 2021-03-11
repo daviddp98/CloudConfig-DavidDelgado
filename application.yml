@@ -1,0 +1,26 @@
+server:
+  port: 9010
+
+spring:
+  application:
+    name: config
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/daviddp98/CloudConfig-DavidDelgado
+          force-pull: true
+          clone-on-start: true
+          username: daviddp98
+          password:
+          default-label: main
+
+          repos:
+            local:
+              uri: https://github.com/daviddp98/CloudConfig-DavidDelgado
+              force-pull: true
+              clone-on-start: true
+              username: daviddp98
+              password:
+              label: main
+
