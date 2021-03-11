@@ -1,0 +1,17 @@
+server:
+  port: 9009    #service port
+
+eureka:         #tells about the Eureka server details and its refresh time
+ client:
+  serviceUrl:
+   defaultZone: ${EUREKA_URI:http://localhost:9011/eureka}
+   healthcheck:
+     enabled: true
+
+spring:
+  application:
+    name: order-DDP   #current service name to be used by the eureka server
+  data:
+    mongodb:
+      database: order-service_db-DDP
+      port: 27017
